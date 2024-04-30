@@ -41,27 +41,28 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
     <!-- END: Custom CSS-->
-    <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
-    <!-- END: Vendor CSS-->
-
-    <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/bordered-layout.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
-
-    <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
-    <!-- END: Page CSS-->
-
-    <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
-    <!-- END: Custom CSS-->
+        <!-- BEGIN: Vendor CSS-->
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/select/select2.min.css">
+        <!-- END: Vendor CSS-->
+    
+        <!-- BEGIN: Theme CSS-->
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/bordered-layout.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
+    
+        <!-- BEGIN: Page CSS-->
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
+        <script src="../../../app-assets/js/scripts/forms/form-input-mask.js"></script>
+        <!-- END: Page CSS-->    
+    
+        <!-- BEGIN: Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+        <!-- END: Custom CSS-->
 
 
 </head>
@@ -550,10 +551,10 @@
                         </li>
                     </ul>
                 </li>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
@@ -578,7 +579,7 @@
                                                 </li>
                                                 <li class="breadcrumb-item"><a href="#">Stok</a>
                                                 </li>
-                                                <li class="breadcrumb-item active"><a href="#">Stok Kartı Tanımlama</a>
+                                                <li class="breadcrumb-item active"><a href="#">Sipariş</a>
                                                 </li>
                                             </ol>
                                         </div>
@@ -614,13 +615,12 @@
                                     <div class="col-md-11 col-12 ms-md-2">
                                         <div class="card">
                                             <div class="card-header">
-                                                <h4 class="card-title">Sipariş</h4>
+                                                <h4 class="card-title">Stok Tanım</h4>
                                             </div>
                                             <div class="card-body">
                                                 <form class="form form-horizontal">
                                                     <div class="row">
 
-                                                        <!--111111111111111111111-->
                                                         <div class="col-md-6">
                                                             <div class="mb-1" >
                                                                 <label class="form-label" for="first-name-vertical">Evrak No
@@ -630,50 +630,50 @@
                                                                 placeholder="Evrak No" tabindex="3" disabled>
                                                             </div>
                                                         </div>
-
-
-
-                                                        <div class="col-md-6 mb-2">
-                                                            <label class="form-label" for="select2-hide-search">cari
-                                                                </label>
-                                                            <select
-                                                                class="hide-search form-select select2-hidden-accessible"
-                                                                id="select2-hide-search"
-                                                                data-select2-id="select2-hide-search" tabindex="4" 
-                                                                aria-hidden="true">
-                                                                <optgroup label="Figures" data-select2-id="353">
-                                                                    <option value="romboid" data-select2-id="354">
-                                                                        Romboid</option>
-                                                                    <option value="trapeze" selected=""
-                                                                        data-select2-id="60">cari</option>
-                                                                    <option value="triangle" data-select2-id="355">
-                                                                        Triangle</option>
-                                                                    <option value="polygon" data-select2-id="356">
-                                                                        Polygon</option>
-                                                                </optgroup>
-    
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-md-6">
+                                                        
+                                                        
+                                                        
+                                                        <div class="col-md-6 mb-1">
+                                                            <label class="form-label" for="select2-array">Cari</label>
                                                             <div class="mb-1">
-                                                                <label class="form-label" for="first-name-vertical">
-                                                                    Tarih</label>
+                                                                <div class="position-relative">
+                                                                    <select class="select2-data-array form-select select2-hidden-accessible" id="select2-array" data-select2-id="select2-array" tabindex="-1" aria-hidden="true">
+                                                                        <option value="0" data-select2-id="28">cari</option>
+                                                                        <option value="1" data-select2-id="29">bug</option>
+                                                                        <option value="2" data-select2-id="30">duplicate</option>
+                                                                        <option value="3" data-select2-id="31">invalid</option>
+                                                                        <option value="4" data-select2-id="32">wontfix</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        </div>
+
+                                                        
+                                                        <div class="col-md-6">
+                                                            <label class="form-label" for="select2-array">Tarih</label>
+                                                            <div class="mb-1">
                                                                 <div class="input-group">
                                                                     <div class="input-group-text">
                                                                         <div class="form-check">
                                                                             <input class="form-check-input" type="checkbox" id="inputCheckbox">
                                                                         </div>
                                                                     </div>
-                                                                    <input type="text" class="form-control" placeholder="Tarih" tabindex="2">
+                                                                    <input type="hidden" id="fp-human-friendly" class="form-control flatpickr-human-friendly flatpickr-input" placeholder="Tarih ">
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        
+                                                        
+                                                        
                                                         <div class="col-12">
                                                             <div class="mb-1">
                                                                 <label class="form-label" for="exampleFormControlTextarea1">Textarea</label>
-                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Textarea" style="height: 86px;"></textarea>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Textarea" style="height: 56px;"></textarea>
                                                             </div>
                                                         </div>
+
+                                                        
                                                             </div>
                                                             
                                                         </div>
@@ -686,18 +686,13 @@
                                 </div>
                             </section>
 
+                        </div>
+                    </div>
+                </section>
+                <!-- Dashboard Ecommerce ends -->
 
-
-    </div>
-    </section>
-
-    </div>
-    </div>
-    </section>
-    <!-- Dashboard Ecommerce ends -->
-
-    </div>
-    </div>
+            </div>
+        </div>
     </div>
     <!-- END: Content-->
 
@@ -716,42 +711,44 @@
 
 
 
-    <!-- BEGIN: Vendor JS-->
-    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
-    <!-- BEGIN Vendor JS-->
-
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.js"></script>
-    <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
-    <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
-    <script src="../../../app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
-    <script src="../../../app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
-    <!-- END: Page Vendor JS-->
-
-    <!-- BEGIN: Theme JS-->
-    <script src="../../../app-assets/js/core/app-menu.js"></script>
-    <script src="../../../app-assets/js/core/app.js"></script>
-    <!-- END: Theme JS-->
-
-    <!-- BEGIN: Page JS-->
-    <script src="../../../app-assets/js/scripts/forms/pickers/form-pickers.js"></script>
-    <!-- END: Page JS-->
-    <!-- BEGIN: Vendor JS-->
-    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
-    <!-- BEGIN Vendor JS-->
-
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
-    <!-- END: Page Vendor JS-->
-
-    <!-- BEGIN: Theme JS-->
-    <script src="../../../app-assets/js/core/app-menu.js"></script>
-    <script src="../../../app-assets/js/core/app.js"></script>
-    <!-- END: Theme JS-->
-
-    <!-- BEGIN: Page JS-->
-    <script src="../../../app-assets/js/scripts/forms/form-select2.js"></script>
-    <!-- END: Page JS-->
+      <!-- BEGIN: Vendor JS-->
+      <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+      <!-- BEGIN Vendor JS-->
+      <script src="../../../app-assets/vendors/js/forms/cleave/cleave.min.js"></script>
+    <script src="../../../app-assets/vendors/js/forms/cleave/addons/cleave-phone.us.js"></script>
+      <!-- BEGIN: Page Vendor JS-->
+      <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+      <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+      <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+      <script src="../../../app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+      <script src="../../../app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+      <!-- END: Page Vendor JS-->
+  
+      <!-- BEGIN: Theme JS-->
+      <script src="../../../app-assets/js/core/app-menu.js"></script>
+      <script src="../../../app-assets/js/core/app.js"></script>
+      <!-- END: Theme JS-->
+  
+      <!-- BEGIN: Page JS-->
+      <script src="../../../app-assets/js/scripts/forms/pickers/form-pickers.js"></script>
+      <!-- END: Page JS-->
+        <!-- BEGIN: Vendor JS-->
+        <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+        <!-- BEGIN Vendor JS-->
+    
+        <!-- BEGIN: Page Vendor JS-->
+        <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+        <!-- END: Page Vendor JS-->
+    
+        <!-- BEGIN: Theme JS-->
+        <script src="../../../app-assets/js/core/app-menu.js"></script>
+        <script src="../../../app-assets/js/core/app.js"></script>
+        <script src="../../../app-assets/js/scripts/forms/form-input-mask.js"></script>
+        <!-- END: Theme JS-->
+    
+        <!-- BEGIN: Page JS-->
+        <script src="../../../app-assets/js/scripts/forms/form-select2.js"></script>
+        <!-- END: Page JS-->    <script src="../../../app-assets/js/scripts/forms/form-input-mask.js"></script>
     <script>
 
         $(window).on('load', function () {
@@ -767,3 +764,15 @@
 <!-- END: Body-->
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+ 
