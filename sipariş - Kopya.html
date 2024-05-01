@@ -11,12 +11,15 @@
     <meta name="keywords"
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Stok Kartı Tanımlama</title>
+    <title>Sipariş Girişi</title>
     <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
-
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/dataTables.bootstrap5.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/responsive.bootstrap4.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/pickers/flatpickr/flatpickr.min.css">
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
     <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/pickers/pickadate/pickadate.css">
@@ -577,14 +580,14 @@
                             <div class="content-header-left col-md-9 col-12 mb-2">
                                 <div class="row breadcrumbs-top">
                                     <div class="col-12">
-                                        <h2 class="content-header-title float-start mb-0">Stok Kartı Girişi</h2>
+                                        <h2 class="content-header-title float-start mb-0">Sipariş Girişi</h2>
                                         <div class="breadcrumb-wrapper">
                                             <ol class="breadcrumb">
                                                 <li class="breadcrumb-item"><a href="index.html">Home</a>
                                                 </li>
-                                                <li class="breadcrumb-item"><a href="#">Stok</a>
+                                                <li class="breadcrumb-item"><a href="#">Sipariş</a>
                                                 </li>
-                                                <li class="breadcrumb-item active"><a href="#">Stok Kartı Tanımlama</a>
+                                                <li class="breadcrumb-item active"><a href="#">Sipariş Girişi</a>
                                                 </li>
                                             </ol>
                                         </div>
@@ -626,239 +629,50 @@
                                                 <form class="form form-horizontal">
                                                     <div class="row">
 
-                                                        <!--111111111111111111111-->
                                                         <div class="col-md-6">
                                                             <div class="mb-1" >
-                                                                <label class="form-label" for="first-name-vertical">Stok
-                                                                    Kodu</label>
+                                                                <label class="form-label" for="first-name-vertical">Evrak No
+                                                                </label>
                                                                 <input type="text" id="first-name-vertical"
-                                                                    class="form-control" name="fname"
-                                                                    placeholder="Stok Kodu" tabindex="1">
+                                                                class="form-control" name="fname"
+                                                                placeholder="Evrak No" tabindex="3" disabled>
                                                             </div>
                                                         </div>
-                                                        <!--111111111111111111111-->
-
-                                                        <!--222222222222222222222-->
-                                                        <div class="col-md">
+                                                        
+                                                        
+                                                        
+                                                        <div class="col-md-6 mb-1">
+                                                            <label class="form-label" for="select2-array">Cari</label>
                                                             <div class="mb-1">
-                                                                <label class="form-label" for="first-name-vertical">
-                                                                    Dgh</label>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-text">
-                                                                        <div class="form-check">
-                                                                            <input class="form-check-input" type="checkbox" id="inputCheckbox">
-                                                                        </div>
-                                                                    </div>
-                                                                    <input type="text" class="form-control" placeholder="Dgh" tabindex="2">
+                                                                <div class="position-relative">
+                                                                    <select class="select2-data-array form-select select2-hidden-accessible" id="select2-array" data-select2-id="select2-array" tabindex="-1" aria-hidden="true">
+                                                                        <option value="0" data-select2-id="28">cari</option>
+                                                                        <option value="1" data-select2-id="29">bug</option>
+                                                                        <option value="2" data-select2-id="30">duplicate</option>
+                                                                        <option value="3" data-select2-id="31">invalid</option>
+                                                                        <option value="4" data-select2-id="32">wontfix</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <!--222222222222222222222-->
 
-                                                        <!--333333333333333333333-->
-                                                        <div class="col-md-6">
-                                                            <div class="mb-1" >
-                                                                <label class="form-label" for="first-name-vertical">Üst Kod
-                                                                </label>
-                                                                <input type="text" id="first-name-vertical"
-                                                                class="form-control" name="fname"
-                                                                placeholder="Üst Kod" tabindex="3" disabled>
-                                                            </div>
-                                                        </div>
-                                                        <!--333333333333333333333-->
-
-                                                        <!--444444444444444444444-->
-                                                        <div class="col-md-6 mb-2">
-                                                            <label class="form-label" for="select2-hide-search">Tür
-                                                                </label>
-                                                            <select
-                                                                class="hide-search form-select select2-hidden-accessible"
-                                                                id="select2-hide-search"
-                                                                data-select2-id="select2-hide-search" tabindex="4" 
-                                                                aria-hidden="true">
-                                                                <optgroup label="Figures" data-select2-id="353">
-                                                                    <option value="romboid" data-select2-id="354">
-                                                                        Romboid</option>
-                                                                    <option value="trapeze" selected=""
-                                                                        data-select2-id="60">Tür</option>
-                                                                    <option value="triangle" data-select2-id="355">
-                                                                        Triangle</option>
-                                                                    <option value="polygon" data-select2-id="356">
-                                                                        Polygon</option>
-                                                                </optgroup>
-    
-                                                            </select>
-                                                        </div>
-                                                        <!--444444444444444444444-->
                                                         
-                                                        <!--555555555555555555555-->
-                                                        <div class="col-md-6">
-                                                            <div class="mb-1" >
-                                                                <label class="form-label" for="first-name-vertical"> 
-                                                                Bağlantı Kodu</label>
-                                                                <input type="text" id="first-name-vertical"
-                                                                class="form-control" name="fname"
-                                                                placeholder="Bağlantı Kodu" tabindex="5">
+                                                        
+                                                        <!-- /////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                                                        <div class="col-md-6 mb-1" >
+                                                            <label class="form-label" for="select2-array">Tarih</label>
+                                                                    <input type="hidden" id="fp-human-friendly" class="form-control flatpickr-human-friendly flatpickr-input" placeholder="Tarih ">
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                        <div class="col-12">
+                                                            <div class="mb-1">
+                                                                <label class="form-label" for="exampleFormControlTextarea1">Açıklama</label>
+                                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Açıklama" style="height: 56px;"></textarea>
                                                             </div>
                                                         </div>
-                                                        <!--555555555555555555555-->
-
-                                                        <!--666666666666666666666-->
-                                                        <div class="col-md-6 mb-2">
-                                                            <label class="form-label" for="select3-hide-search">Gurubu
-                                                                </label>
-                                                            <select
-                                                                class="hide-search form-select select3-hidden-accessible"
-                                                                id="select2-hide-search"
-                                                                data-select2-id="select3-hide-search" tabindex="6" 
-                                                                aria-hidden="true">
-                                                                <optgroup label="Figures" data-select2-id="453">
-                                                                    <option value="romboid" data-select2-id="454">
-                                                                        Romboid</option>
-                                                                    <option value="trapeze" selected=""
-                                                                        data-select2-id="460">Gurubu</option>
-                                                                    <option value="triangle" data-select2-id="455">
-                                                                        Triangle</option>
-                                                                    <option value="polygon" data-select2-id="456">
-                                                                        Polygon</option>
-                                                                </optgroup>
-                                                            </select>
-                                                        </div>
-                                                        <!--666666666666666666666-->
-                                                  
-                                                  <div class="col-md-6">
-                                                    <div class="mb-1" >
-                                                        <label class="form-label" for="first-name-vertical"> 
-                                                        İsim</label>
-                                                        <input type="text" id="first-name-vertical"
-                                                        class="form-control" name="fname"
-                                                        placeholder="İsim" tabindex="7">
-                                                    </div>
-                                                </div>
-                                               
-
-                                                
-                                                <div class="col-md-6 mb-2">
-                                                    <label class="form-label" for="select4-hide-search">Birim
-                                                        </label>
-                                                    <select
-                                                        class="hide-search form-select select2-hidden-accessible"
-                                                        id="select2-hide-search"
-                                                        data-select2-id="select4-hide-search" tabindex="8" 
-                                                        aria-hidden="true">
-                                                        <optgroup label="Figures" data-select2-id="553">
-                                                            <option value="romboid" data-select2-id="554">
-                                                                Romboid</option>
-                                                            <option value="trapeze" selected=""
-                                                                data-select2-id="560">Birim</option>
-                                                            <option value="triangle" data-select2-id="555">
-                                                                Triangle</option>
-                                                            <option value="polygon" data-select2-id="556">
-                                                                Polygon</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="mb-1" >
-                                                        <label class="form-label" for="first-name-vertical"> 
-                                                        İsim 2</label>
-                                                        <input type="text" id="first-name-vertical"
-                                                        class="form-control" name="fname"
-                                                        placeholder="İsim 2" tabindex="9">
-                                                    </div>
-                                                </div>
-                                               
-
-                                                
-                                                <div class="col-md-6 mb-2">
-                                                    <label class="form-label" for="select5-hide-search">Kdv
-                                                        </label>
-                                                    <select
-                                                        class="hide-search form-select select2-hidden-accessible"
-                                                        id="select2-hide-search"
-                                                        data-select2-id="select5-hide-search" tabindex="10" 
-                                                        aria-hidden="true">
-                                                        <optgroup label="Figures" data-select2-id="653">
-                                                            <option value="romboid" data-select2-id="654">
-                                                                Romboid</option>
-                                                            <option value="trapeze" selected=""
-                                                                data-select2-id="660">Kdv</option>
-                                                            <option value="triangle" data-select2-id="655">
-                                                                Triangle</option>
-                                                            <option value="polygon" data-select2-id="656">
-                                                                Polygon</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                                <div class=" col-md-5  mb-2">
-                                                    <label class="form-label" for="numeral-formatting">Fiyat</label>
-                                                    <input type="text" class="form-control numeral-mask" placeholder="Fiyat" id="numeral-formatting">
-                                                </div>
-
-                                                <div class="col-md-1 mt-2">
-                                                    <select
-                                                    class="hide-search form-select select8-hidden-accessible"
-                                                    id="select8-hide-search"
-                                                    data-select2-id="select5-hide-search" tabindex="10" 
-                                                    aria-hidden="true">
-                                                        <option value="trapeze" selected=""
-                                                            data-select2-id="660">TL</option>
-                                                        <option value="triangle" data-select2-id="655">
-                                                            Dolar</option>
-                                                        <option value="polygon" data-select2-id="656">
-                                                            Yuro</option>
-
-                                                </select>
-                                            </div>
-                                                <div class="col-md-6">
-                                                    <div class="mb-1" >
-                                                        <label class="form-label" for="first-name-vertical"> 
-                                                        Özel Kod</label>
-                                                        <input type="text" id="first-name-vertical"
-                                                        class="form-control" name="fname"
-                                                        placeholder="Özel Kod" tabindex="9">
-                                                    </div>
-                                                </div>
-                                                <div class=" col-md-5  mb-2">
-                                                    <label class="form-label" for="numeral-formatting">Fiyat 2</label>
-                                                    <input type="text" class="form-control numeral-mask" placeholder="Fiyat 2" id="numeral-formatting2">
-                                                </div>
-
-                                                <div class="col-md-1 mt-2">
-                                                    <select
-                                                    class="hide-search form-select select9-hidden-accessible"
-                                                    id="select8-hide-search"
-                                                    data-select2-id="select9-hide-search" tabindex="10" 
-                                                    aria-hidden="true">
-                                                        <option value="trapeze" selected=""
-                                                            data-select2-id="660">TL</option>
-                                                        <option value="triangle" data-select2-id="655">
-                                                            Dolar</option>
-                                                        <option value="polygon" data-select2-id="656">
-                                                            Yuro</option>
-                                                </select>
-                                            </div>
-                                                <div class="col-md-6">
-                                                    <div class="mb-1" >
-                                                        <label class="form-label" for="first-name-vertical"> 
-                                                        Barkod</label>
-                                                        <input type="text" id="first-name-vertical"
-                                                        class="form-control" name="fname"
-                                                        placeholder="Barkod" tabindex="9">
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-md-6">
-                                                    <div class="col-md-8 offset-sm-2">
-                                                        <button tabindex="19" type="reset" class="col-10 btn btn-outline-secondary waves-effect">Vazgeç</button>
-                                                    </div>
-                                                    </div>
-                                                <div class="col-md-6">
-                                                    <div class="col-md-8 offset-sm-2">
-                                                        <button tabindex="18" type="reset" class="col-10 btn btn-primary me-3 waves-effect waves-float waves-light">Kaydet</button>
-                                                    </div>
-                                                    </div>
+                                                        
 
                                                         
                                                             </div>
@@ -872,7 +686,116 @@
 
                                 </div>
                             </section>
+                            <section id="basic-horizontal-layouts2">
+                                <div class="row">
+                                    <div class="col-md-11 col-12 ms-md-2">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Ekleleme Yeri</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <form class="form form-horizontal">
+                                                    <div class="row">
+<!-- 21222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 -->
+<div class="col-md-6 mb-1" data-select2-id="99">
+    <label class="form-label" for="select2-basic">Stok Kodu</label>
+    <div class="position-relative" data-select2-id="98"><select class="select2 form-select select2-hidden-accessible" id="select2-basic" data-select2-id="select2-basic" tabindex="-1" aria-hidden="true">
+        <option value="AK" data-select2-id="2">Stok Kodu</option>
+        <option value="HI" data-select2-id="100">Hawaii</option>
+        <option value="CA" data-select2-id="101">California</option>
+        <option value="NV" data-select2-id="102">Nevada</option>
+        <option value="OR" data-select2-id="103">Oregon</option>
+        <option value="WA" data-select2-id="104">Washington</option>
+    </select>
+        </div>
+</div>
 
+<div class="col-xl-6 col-md-6 col-sm-12 mb-2">
+    <label class="form-label" for="numeral-formatting">Miktar</label>
+    <input type="text" class="form-control numeral-mask" placeholder="Miktar" id="numeral-formatting">
+</div>
+
+<div class="col-12">
+    <div class="mb-1">
+        <label class="form-label" for="exampleFormControlTextarea1">Açıklama</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Açıklama" style="height: 76px;"></textarea>
+    </div>
+</div>
+<div class="col-sm-12 offset-1  " >
+    <button type="button" class=" btn btn-primary waves-effect waves-float waves-light"  style="width: 130px;">Ekle</button>
+</div>
+                                                        <!-- 222222222222222222222222222222222222222 -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header border-bottom">
+                                        <h4 class="card-title">Stok Liste
+                                        </h4>
+                                    </div>
+                                    <div class="card-datatable">
+                                        <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap5"><div class="d-flex justify-content-between align-items-center mx-0 row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="DataTables_Table_1_length"><label>Show <select name="DataTables_Table_1_length" aria-controls="DataTables_Table_1" class="form-select"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="DataTables_Table_1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_1"></label></div></div></div><table class="dt-column-search table table-responsive dataTable" id="DataTables_Table_1" role="grid" aria-describedby="DataTables_Table_1_info" style="width: 1314px;">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 266px;">id</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Post: activate to sort column ascending" style="width: 266px;">  Stok Kodu  </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="City: activate to sort column ascending" style="width: 266px;">  Stok Adı   </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="width: 266px;">  Miktar     </th>
+                                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 266px;">Açıklama   </th>
+                                                </tr>
+                                            <tr role="row">
+                                                <th rowspan="1" colspan="1">
+                                                    <input type="text" class="form-control form-control-sm" placeholder="Search id"></th>
+                                                    <th rowspan="1" colspan="1"><input type="text" class="form-control form-control-sm" placeholder="Search Stok Kodu "></th>
+                                                    <th rowspan="1" colspan="1"><input type="text" class="form-control form-control-sm" placeholder="Search Stok Adı   "></th>
+                                                    <th rowspan="1" colspan="1"><input type="text" class="form-control form-control-sm" placeholder="Search Miktar"></th>
+                                                    <th rowspan="1" colspan="1"><input type="text" class="form-control form-control-sm" placeholder="Search Açıklama"></th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                <th rowspan="1" colspan="1">id          </th>
+                                                <th rowspan="1" colspan="1">Stok Kodu        </th>
+                                                <th rowspan="1" colspan="1">Stok Adı        </th>
+                                                <th rowspan="1" colspan="1">Miktar        </th>
+                                                <th rowspan="1" colspan="1">Açıklama        </th>
+                                                </tr>
+                                            </tfoot>
+                                        <tbody>
+                                        <tr class="odd"><td valign="top" colspan="6" class="dataTables_empty">Loading...</td>
+                                        </tr>
+                                        </tbody>
+                                        </table>
+                                        <div class="d-flex justify-content-between mx-0 row">
+                                        <div class="col-sm-12 col-md-6">
+                                        <div class="dataTables_info" id="DataTables_Table_1_info" role="status" aria-live="polite">Showing 0 to 0 of 0 entries</div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6"><div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_1_paginate">
+                                        <ul class="pagination">
+                                        <li class="paginate_button page-item previous disabled" id="DataTables_Table_1_previous">
+                                        <a href="#" aria-controls="DataTables_Table_1" data-dt-idx="0" tabindex="0" class="page-link">&nbsp;</a>
+                                        </li>
+                                        <li class="paginate_button page-item next disabled" id="DataTables_Table_1_next">
+                                        <a href="#" aria-controls="DataTables_Table_1" data-dt-idx="1" tabindex="0" class="page-link">&nbsp;</a>
+                                    </li>
+                                </ul></div>
+                            </div>
+                        </div>
+                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -936,6 +859,12 @@
         <!-- BEGIN: Page JS-->
         <script src="../../../app-assets/js/scripts/forms/form-select2.js"></script>
         <!-- END: Page JS-->    <script src="../../../app-assets/js/scripts/forms/form-input-mask.js"></script>
+        <script src="../../../app-assets/vendors/js/tables/datatable/jquery.dataTables.min.js"></script>
+        <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.bootstrap5.min.js"></script>
+        <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"></script>
+        <script src="../../../app-assets/vendors/js/tables/datatable/responsive.bootstrap4.js"></script>
+        <script src="../../../app-assets/vendors/js/pickers/flatpickr/flatpickr.min.js"></script>
+        <!-- END: Page Vendor JS-->
     <script>
 
         $(window).on('load', function () {
@@ -951,3 +880,13 @@
 <!-- END: Body-->
 
 </html>
+
+
+
+
+
+
+
+
+
+
